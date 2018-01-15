@@ -1,7 +1,7 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "collectivo-forma",
   "version": "1.0.0",
-  "description": "A frontend development boilerplate based on webpack",
+  "description": "The website of the collectivo-forma",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dnlml/webpack-boilerplate.git"
+    "url": "git+ssh://git@github.com/dnlml/collectivo-forma.git"
   },
   "author": "Daniele Meli",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dnlml/webpack-boilerplate/issues"
+    "url": "https://github.com/dnlml/collectivo-forma/issues"
   },
-  "homepage": "https://github.com/dnlml/webpack-boilerplate#readme",
+  "homepage": "https://github.com/dnlml/collectivo-forma#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^7.1.2",
