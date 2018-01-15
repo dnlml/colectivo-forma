@@ -1,4 +1,4 @@
-# collectivo Forma
+# collectivo-forma
 _The website of the collectivo-forma_
 
 ### Start
