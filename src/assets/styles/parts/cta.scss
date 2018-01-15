@@ -1,0 +1,56 @@
+.cta {
+  display: inline-block;
+  padding: 1em 1.6em;
+  margin: 2em 0;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  align-self: center;
+  position: relative;
+  z-index: 10;
+  background-color: lighten($petrol, 5%);
+  color: white;
+  border: .1rem solid white;
+  transition: all .33s ease-out;
+
+  @include mq(large) {
+    font-size: 2rem;
+    margin: 4em 0 2.5em;
+  }
+
+  .container--inverted & {
+    background-color: white;
+    border: .1rem solid $dark;
+  }
+}
+
+.cta__text {
+  display: inline-block;
+  transition: transform .33s ease-out;
+  color: white;
+
+  .container--inverted & {
+    color: $dark;
+  }
+}
+
+.cta-wrapper {
+  position: relative;
+  align-self: stretch;
+  text-align: center;
+}
+
+.cta__square {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  background-color: $petrol;
+  transform: translate3d(-100%, -100%, 0) rotate(10deg);
+  transition: transform .33s ease-out;
+}
+
+.cta__square--expanded {
+  transform: translate3d(0, -10%, 0) rotate(50deg);
+}

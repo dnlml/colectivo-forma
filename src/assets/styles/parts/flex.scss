@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex__item--right {
+  align-self: flex-end;
+}

@@ -1,0 +1,23 @@
+.container {
+  padding: 0 2rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  * {
+    transition: color .33s ease-in-out;
+  }
+
+  @include mq(large) {
+    max-width: 80rem;
+  }
+}
+
+.container--inverted {
+  *:not(.cta__text) {
+    color: white;
+  }
+}

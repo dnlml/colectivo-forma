@@ -1,0 +1,61 @@
+.coords {
+
+}
+
+.coords__list {
+  margin: 2rem 0;
+
+  position: relative;
+  z-index: 10;
+
+  @include mq(small) {
+    display: flex;
+    max-width: 100%;
+    margin: 4rem 0 2rem;
+  }
+
+  @include  mq(large) {
+     margin: 4rem 0 2rem;
+  }
+}
+
+.coords__item {
+  position: relative;
+  padding-left: 6.5rem;
+  margin-bottom: 3rem;
+  line-height: 1;
+
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  &:not(:first-child) {
+    @include mq(small) {
+      margin-left: 2rem;
+    }
+
+    @include mq(large) {
+      margin-left: 6rem;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5rem;
+    height: .1rem;
+    background-color: $dark;
+    transition: background-color .33s ease-in-out;
+
+    top: .6em;
+    left: 0rem;
+
+    .container--inverted & {
+      background-color: white;
+    }
+  }
+
+  @include mq(large) {
+    font-size: 4rem;
+  }
+}

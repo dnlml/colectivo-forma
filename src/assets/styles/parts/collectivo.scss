@@ -1,0 +1,17 @@
+.collectivo {
+
+}
+
+.collectivo__title {
+  align-self: flex-end;
+  text-align: right;
+
+  position: relative;
+  z-index: 10;
+}
+
+.collectivo__title__h1 {
+  @include mq(medium-l) {
+    margin-right: -10rem;
+  }
+}

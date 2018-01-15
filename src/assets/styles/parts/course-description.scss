@@ -1,0 +1,20 @@
+.course-description {
+  margin: 2em 0;
+  line-height: 1.4;
+  position: relative;
+  z-index: 10;
+
+  @include mq(small){
+    font-size: 2rem;
+  }
+
+  @include mq(large){
+    margin: 2em 0 0;
+  }
+}
+
+.course-description__title {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding-bottom: .2em;
+}

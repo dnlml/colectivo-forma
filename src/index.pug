@@ -1,0 +1,49 @@
+doctype html
+html(lang="en" class="no-js")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Collectivo-forma
+    script.
+      document.documentElement.classList.remove("no-js")
+      document.documentElement.classList.add("js")
+  body
+    include includes/vars.pug
+    include includes/mixins.pug
+
+    div.container.js-container
+      article.flex
+        header.header.collectivo__title
+          h1.headline.collectivo__title__h1
+            |collectivo-
+            br
+            |forma
+        section.course-description
+          h2.course-description__title.
+            Taller de revelado a color
+          p.course-description__text.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ducimus nulla beatae laudantium et, similique quia consectetur unde deleniti, distinctio, facere molestiae cumque recusandae nobis sint laborum porro nostrum eveniet.
+        div.cta-wrapper
+          a.cta.js-hover(href="/link/to/form")
+            span.cta__text Me inscribo!
+          div.cta__square.js-bg
+
+        ul.coords__list
+          li.coords__item
+            |24-25
+            br
+            |March
+            br
+            |2018
+
+          li.coords__item
+            a(href="https://www.google.es/maps/place/MADE+Makerspace/@41.3730516,2.1390873,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4a2e4dc2b5ebd:0x1de1dbcc11d6cda9!8m2!3d41.3730516!4d2.141276" target="_blank").
+              @Made
+
+
+      //- +svg("circle", "100", "100")
+
+      //- +svg("square")
+
+      //- include includes/footer.pug
