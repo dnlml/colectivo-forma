@@ -1,8 +1,8 @@
-.collectivo {
+.colectivo {
 
 }
 
-.collectivo__title {
+.colectivo__title {
   align-self: flex-end;
   text-align: right;
 
@@ -10,7 +10,7 @@
   z-index: 10;
 }
 
-.collectivo__title__h1 {
+.colectivo__title__h1 {
   @include mq(medium-l) {
     margin-right: -10rem;
   }

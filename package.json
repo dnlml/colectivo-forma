@@ -1,7 +1,7 @@
 {
-  "name": "collectivo-forma",
+  "name": "colectivo-forma",
   "version": "1.0.0",
-  "description": "The website of the collectivo-forma",
+  "description": "The website of the colectivo-forma",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dnlml/collectivo-forma.git"
+    "url": "git+ssh://git@github.com/dnlml/colectivo-forma.git"
   },
   "author": "Daniele Meli",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dnlml/collectivo-forma/issues"
+    "url": "https://github.com/dnlml/colectivo-forma/issues"
   },
-  "homepage": "https://github.com/dnlml/collectivo-forma#readme",
+  "homepage": "https://github.com/dnlml/colectivo-forma#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^7.1.2",

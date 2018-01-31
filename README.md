@@ -1,5 +1,5 @@
-# collectivo-forma
-_The website of the collectivo-forma_
+# colectivo-forma
+_The website of the colectivo-forma_
 
 ### Start
 
