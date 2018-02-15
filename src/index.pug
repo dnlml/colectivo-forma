@@ -12,34 +12,52 @@ html(lang="en" class="no-js")
     include includes/vars.pug
     include includes/mixins.pug
 
-    div.container.js-container
-      article.flex
-        header.header.colectivo__title
-          h1.headline.colectivo__title__h1
-            |colectivo-
-            br
-            |forma
-        section.course-description
-          h2.course-description__title.
-            Taller de revelado a color
-          p.course-description__text.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ducimus nulla beatae laudantium et, similique quia consectetur unde deleniti, distinctio, facere molestiae cumque recusandae nobis sint laborum porro nostrum eveniet.
-        div.cta-wrapper
-          a.cta.js-hover(href="/link/to/form")
-            span.cta__text Me inscribo!
-          div.cta__square.js-bg
+    div.container.flex.js-container
+      header.header.colectivo__title
+        h1.headline.colectivo__title__h1
+          |colectivo-
+          br
+          |forma
+      section.course-description
+        h2.course-description__title.
+          Taller de revelado a color
+        p.course-description__text
+          | This course is a dive into analogue colour photography.
+          br
+          br
+          | A full immersion on how to develop your own colour films.
+          br
+          br
+          | For two days you will be inspired by great examples of fine art colour photography, and you will shoot and reveal your ideas on films.
+          br
+          br
+          |We provide one disposable 35mm colour film camera for each participant, developing tools and chemicals.
+          br
+          |If you already own an analogue camera and a 135 film, feel free to bring it and use it.
+          br
+          br
+          | At the end of the workshop, you will be able to set up your "home lab" for developing your films.
+          br
+          br
+          |The price is 60€ (all inclusive).
+          br
+          |The workshop will be in English and Spanish (but we welcome Italian and French).
+      div.cta-wrapper
+        a.cta.js-hover(href="https://www.eventbrite.es/e/entradas-revelaciones-taller-de-revelado-a-color-43217405423" target="_blank")
+          span.cta__text Me inscribo!
+        div.cta__square.js-bg
 
-        ul.coords__list
-          li.coords__item
-            |24-25
-            br
-            |March
-            br
-            |2018
+      ul.coords__list
+        li.coords__item
+          |24-25
+          br
+          |March
+          br
+          |2018
 
-          li.coords__item
-            a(href="https://www.google.es/maps/place/MADE+Makerspace/@41.3730516,2.1390873,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4a2e4dc2b5ebd:0x1de1dbcc11d6cda9!8m2!3d41.3730516!4d2.141276" target="_blank").
-              @Made
+        li.coords__item
+          a(href="https://www.google.es/maps/place/MADE+Makerspace/@41.3730516,2.1390873,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4a2e4dc2b5ebd:0x1de1dbcc11d6cda9!8m2!3d41.3730516!4d2.141276" target="_blank").
+            @Made
 
 
       //- +svg("circle", "100", "100")
