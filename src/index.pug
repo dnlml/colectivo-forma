@@ -4,7 +4,23 @@ html(lang="en" class="no-js")
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/site.webmanifest")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
     title Colectivo-forma
+
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-114309157-1")
+    script
+      |window.dataLayer = window.dataLayer || [];
+      |function gtag(){dataLayer.push(arguments);}
+      |gtag('js', new Date());
+
+      |gtag('config', 'UA-114309157-1');
+
     script.
       document.documentElement.classList.remove("no-js")
       document.documentElement.classList.add("js")
@@ -20,7 +36,7 @@ html(lang="en" class="no-js")
           |forma
       section.course-description
         h2.course-description__title.
-          Taller de revelado a color
+          Revelaciones - Taller de revelado a color
         p.course-description__text
           | This course is a dive into analogue colour photography.
           br
@@ -44,7 +60,7 @@ html(lang="en" class="no-js")
           |The workshop will be in English and Spanish (but we welcome Italian and French).
       div.cta-wrapper
         a.cta.js-hover(href="https://www.eventbrite.es/e/entradas-revelaciones-taller-de-revelado-a-color-43217405423" target="_blank")
-          span.cta__text I participate!
+          span.cta__text I sign up!
         div.cta__square.js-bg
 
       ul.coords__list
