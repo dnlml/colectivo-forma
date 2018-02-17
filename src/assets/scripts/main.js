@@ -4,6 +4,7 @@ sprite.keys().forEach(sprite);
 
 const WebFont = require('webfontloader');
 const Hover = require('./parts/hover');
+const TabSwitch = require('./parts/tab-switch');
 
 class App {
   constructor () {
@@ -12,6 +13,7 @@ class App {
 
   init() {
     new Hover();
+    new TabSwitch();
   }
 }
 
