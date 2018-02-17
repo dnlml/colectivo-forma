@@ -22,9 +22,11 @@
 
 .tab-switcher__btn {
   &Wrapper {
+    position: relative;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
     height: 25px;
+    z-index: 5;
     
     @include mq(large) {
       position: absolute;
