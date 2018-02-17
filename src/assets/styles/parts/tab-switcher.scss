@@ -1,0 +1,46 @@
+.tab-switcher__container {
+  width: 100%;
+} 
+
+.tab-switcher__description {
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &--visible {
+    visibility: visible;
+  }
+}
+
+.tab-switcher__btn {
+  &Wrapper {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+
+  &Element {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #ddd;
+    }
+
+    &--active {
+      background-color: #ccc;
+    }
+  }
+}
+
+.tab-switcher__content {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
