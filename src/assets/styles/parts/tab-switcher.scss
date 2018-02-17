@@ -2,6 +2,10 @@
   width: 100%;
   min-height: 650px;
   position: relative;
+
+  @include mq(large) {
+    min-height: 500px;
+  }
 } 
 
 .tab-switcher__description {
