@@ -1,5 +1,6 @@
 .tab-switcher__container {
   width: 100%;
+  min-height: 500px;
   position: relative;
 } 
 
@@ -10,6 +11,11 @@
 
   &--visible {
     visibility: visible;
+    padding-top: 50px;
+    
+    @include mq(large) {
+      padding-top: 0;
+    }
   }
 }
 
@@ -17,6 +23,7 @@
   &Wrapper {
     overflow: hidden;
     border-bottom: 1px solid #ccc;
+    height: 25px;
     
     @include mq(large) {
       position: absolute;
@@ -32,7 +39,6 @@
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
     transition: all ease-in-out 0.2s;
 
     &:hover {
