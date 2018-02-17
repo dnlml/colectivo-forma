@@ -1,5 +1,6 @@
 .tab-switcher__container {
   width: 100%;
+  position: relative;
 } 
 
 .tab-switcher__description {
@@ -15,8 +16,14 @@
 .tab-switcher__btn {
   &Wrapper {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    
+    @include mq(large) {
+      position: absolute;
+      transform: rotate(90deg);
+      right: -160px;
+      top: 60px;
+    }
   }
 
   &Element {
@@ -26,14 +33,17 @@
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
+    transition: all ease-in-out 0.2s;
 
     &:hover {
-      background-color: #ddd;
+      background-color: $petrol;
+      color: white;
     }
 
     &--active {
-      background-color: #ccc;
+      background-color: $petrol;
+      color: white;
+      font-weight: 800;
     }
   }
 }
