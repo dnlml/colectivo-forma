@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 
 class Hover {
   constructor () {
