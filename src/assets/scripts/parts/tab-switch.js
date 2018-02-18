@@ -6,6 +6,7 @@ class TabSwitch {
 
     this.buttons = document.querySelectorAll('.js-btn-tab__item');
     this.content = document.querySelector('.tab-switcher__content');
+    this.buttonsWrapper = document.querySelector('.js-btn-tab__item');
     this.descriptions = document.querySelectorAll('.js-article__description');
     
     this.defaultBtn = document.querySelector(`#js-${DEFAULT_LANG}-btn`);
@@ -18,17 +19,17 @@ class TabSwitch {
   }
 
   init () {
-    this.resetDescriptionVisibility();
+    this.eventManager();
+    this.resetDescVisibility();
     this.setDefaultTab();
     this.setDefaultBtn();
-    this.btnClickHandler();
   }
 
-  btnClickHandler() {
+  eventManager() {
     for (let i = 0; i < this.buttonsLength; i++) {
       this.buttons[i].addEventListener('click', (evt) => {
         this.resetBtnVisibility();
-        this.resetDescriptionVisibility();
+        this.resetDescVisibility();
         evt.target.classList.add('tab-switcher__btn-element--active');
         this.descriptions[i].classList.remove('tab-switcher__description--hidden');
         this.descriptions[i].classList.add('tab-switcher__description--visible');
@@ -36,8 +37,8 @@ class TabSwitch {
     }
   }
 
-  resetDescriptionVisibility() {
-    for (let i = 0 ;i < this.descriptionsLength; i++) {
+  resetDescVisibility() {
+    for (let i = 0; i < this.descriptionsLength; i++) {
       this.descriptions[i].classList.remove('tab-switcher__description--visible');
       this.descriptions[i].classList.add('tab-switcher__description--hidden');
     }
