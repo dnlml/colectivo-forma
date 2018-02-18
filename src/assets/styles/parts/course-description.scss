@@ -17,10 +17,8 @@
   text-transform: uppercase;
   font-size: 1.5em;
   padding-bottom: .2em;
-}
 
-.course-description__text:nth-child(n+2) {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include mq(large){
+    margin-bottom: 2rem;
+  }
 }

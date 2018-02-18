@@ -4,11 +4,9 @@ class TabSwitch {
   constructor () {
     const DEFAULT_LANG = 'en';
 
-    this.buttons = document.querySelectorAll('.js-btn-tab__item');
-    this.content = document.querySelector('.tab-switcher__content');
-    this.buttonsWrapper = document.querySelector('.js-btn-tab__item');
-    this.descriptions = document.querySelectorAll('.js-article__description');
-    
+    this.buttons = document.querySelectorAll('.js-tab-switcher__item');
+    this.descriptions = document.querySelectorAll('.js-course-description__text');
+
     this.defaultBtn = document.querySelector(`#js-${DEFAULT_LANG}-btn`);
     this.defaultTab = document.querySelector(`#js-${DEFAULT_LANG}-desc`);
 
@@ -30,7 +28,7 @@ class TabSwitch {
       this.buttons[i].addEventListener('click', (evt) => {
         this.resetBtnVisibility();
         this.resetDescVisibility();
-        evt.target.classList.add('tab-switcher__btn-element--active');
+        evt.target.classList.add('tab-switcher__item--active');
         this.descriptions[i].classList.remove('tab-switcher__description--hidden');
         this.descriptions[i].classList.add('tab-switcher__description--visible');
       });
@@ -46,7 +44,7 @@ class TabSwitch {
 
   resetBtnVisibility() {
     for (let i = 0; i < this.buttonsLength; i++) {
-      this.buttons[i].classList.remove('tab-switcher__btn-element--active');
+      this.buttons[i].classList.remove('tab-switcher__item--active');
     }
   }
 
@@ -62,7 +60,7 @@ class TabSwitch {
   }
 
   setDefaultBtn() {
-    this.defaultBtn.classList.add('tab-switcher__btn-element--active');
+    this.defaultBtn.classList.add('tab-switcher__item--active');
   }
 
 };
