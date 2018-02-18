@@ -1,22 +1,32 @@
 .tab-switcher__container {
   width: 100%;
-  min-height: 650px;
+  min-height: 600px;
   position: relative;
 
+  @include mq(xsmall) {
+    min-height: 515px;
+  }
+
+  @include mq(small) {
+    min-height: 650px;
+  }
+
   @include mq(large) {
-    min-height: 500px;
+    min-height: 550px;
   }
 } 
 
 .tab-switcher__description {
   &--hidden {
     visibility: hidden;
+    opacity: 0;
   }
 
   &--visible {
     visibility: visible;
     padding-top: 50px;
-    animation: fadeEffect 0.75s;
+    opacity: 1;
+    transition: opacity ease-in-out 0.25s;
 
     @include mq(large) {
       padding-top: 0;
@@ -24,46 +34,47 @@
   }
 }
 
-.tab-switcher__btn {
-  &Wrapper {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    height: 25px;
-    z-index: 5;
-    
-    @include mq(large) {
-      position: absolute;
-      transform: rotate(90deg);
-      right: -160px;
-      top: 60px;
-    }
+.tab-switcher__btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid $light-grey;
+  height: 25px;
+  
+  @include mq(large) {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -160px;
+    top: 60px;
+  }
+}
+
+.tab-switcher__btn-element {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 4px;
+  transition: all ease-in-out 0.2s;
+
+  &:last-child {
+    margin-right: 0;
   }
 
-  &Element {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-right: 4px;
-    transition: all ease-in-out 0.2s;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      background-color: $petrol;
-      color: white;
-    }
-
-    &--active {
-      background-color: $petrol;
-      color: white;
-      font-weight: 800;
-    }
+  &:hover {
+    background-color: $petrol;
+    color: white;
   }
+
+  &--active {
+    background-color: $petrol;
+    color: white;
+    font-weight: 800;
+  }
+}
+
+.tab-switcher__articles-container {
+  position: relative;
 }
 
 .tab-switcher__content {
@@ -71,9 +82,4 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }

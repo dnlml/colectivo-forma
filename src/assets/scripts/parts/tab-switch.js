@@ -1,15 +1,18 @@
-'use script';
+'use strict';
 
 class TabSwitch {
   constructor () {
     const DEFAULT_LANG = 'en';
 
-    this.button = document.querySelectorAll('.tab-switcher__btnElement');
+    this.buttons = document.querySelectorAll('.js-btn-tab__item');
     this.content = document.querySelector('.tab-switcher__content');
-    this.description = document.querySelectorAll('.course-description__text');
+    this.descriptions = document.querySelectorAll('.js-article__description');
     
-    this.defaultBtn = document.querySelector(`#${DEFAULT_LANG}-btn`);
-    this.defaultTab = document.querySelector(`#${DEFAULT_LANG}-desc`);
+    this.defaultBtn = document.querySelector(`#js-${DEFAULT_LANG}-btn`);
+    this.defaultTab = document.querySelector(`#js-${DEFAULT_LANG}-desc`);
+
+    this.buttonsLength = this.buttons.length;
+    this.descriptionsLength = this.descriptions.length;
 
     this.init();
   }
@@ -22,38 +25,43 @@ class TabSwitch {
   }
 
   btnClickHandler() {
-    this.button.forEach((btn, index) => {
-      btn.addEventListener('click', (evt) => {
+    for (let i = 0; i < this.buttonsLength; i++) {
+      this.buttons[i].addEventListener('click', (evt) => {
         this.resetBtnVisibility();
         this.resetDescriptionVisibility();
-        evt.target.classList.add('tab-switcher__btnElement--active');
-        this.description[index].classList.remove('tab-switcher__description--hidden');
-        this.description[index].classList.add('tab-switcher__description--visible');
+        evt.target.classList.add('tab-switcher__btn-element--active');
+        this.descriptions[i].classList.remove('tab-switcher__description--hidden');
+        this.descriptions[i].classList.add('tab-switcher__description--visible');
       });
-    });
+    }
   }
 
   resetDescriptionVisibility() {
-    this.description.forEach(el => {
-      el.classList.remove('tab-switcher__description--visible');
-      el.classList.add('tab-switcher__description--hidden');
-    });
+    for (let i = 0 ;i < this.descriptionsLength; i++) {
+      this.descriptions[i].classList.remove('tab-switcher__description--visible');
+      this.descriptions[i].classList.add('tab-switcher__description--hidden');
+    }
   }
 
   resetBtnVisibility() {
-    this.button.forEach(el => el.classList.remove('tab-switcher__btnElement--active'));
+    for (let i = 0; i < this.buttonsLength; i++) {
+      this.buttons[i].classList.remove('tab-switcher__btn-element--active');
+    }
   }
 
   setDefaultTab() {
-    this.defaultTab.classList.forEach((cl) => {
-      if (cl === 'tab-switcher__description--hidden')
+    this.defaultTabLength = this.defaultTab.classList.length;
+
+    for (let i = 0; i < this.defaultTabLength; i++) {
+      if (this.defaultTab.classList[i] === 'tab-switcher__description--hidden') {
         this.defaultTab.classList.remove('tab-switcher__description--visible')
-    });
+      }
+    }
     this.defaultTab.classList.add('tab-switcher__description--visible');
   }
 
   setDefaultBtn() {
-    this.defaultBtn.classList.add('tab-switcher__btnElement--active');
+    this.defaultBtn.classList.add('tab-switcher__btn-element--active');
   }
 
 };
