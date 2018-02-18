@@ -1,19 +1,6 @@
 .tab-switcher__container {
-  width: 100%;
-  min-height: 600px;
   position: relative;
-
-  @include mq(xsmall) {
-    min-height: 515px;
-  }
-
-  @include mq(small) {
-    min-height: 650px;
-  }
-
-  @include mq(large) {
-    min-height: 550px;
-  }
+  width: 100%;
 } 
 
 .tab-switcher__description {
