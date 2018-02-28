@@ -19,7 +19,8 @@
 }
 
 .tab-switcher__list {
-  display: flex;
+  // display: flex;
+  display: none;
   flex-direction: row;
   border-bottom: .1rem solid $light-grey;
   margin-bottom: 2rem;
