@@ -4,7 +4,7 @@
   "description": "The website of the colectivo-forma",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "clean": "rimraf ./dist/*",
     "build": "npm run clean && webpack -p"
   },
@@ -42,5 +42,8 @@
     "webpack-dev-server": "^2.4.1",
     "write-file-webpack-plugin": "^4.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0",
+    "rxjs": "^5.5.7"
+  }
 }

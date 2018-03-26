@@ -5,10 +5,13 @@ _The website of the colectivo-forma_
 
 use npm v8.6.0
 
-`npm i`
+`npm i` or `yarn`
 
-`npm run dev`
+`npm start` or `yarn start`
 
 or
 
-`npm run build`
+`npm run build` or `yarn run build`
+
+
+It uses `rxjs`

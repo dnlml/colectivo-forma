@@ -6,6 +6,8 @@ const WebFont = require('webfontloader');
 const Hover = require('./parts/hover');
 const TabSwitch = require('./parts/tab-switch');
 
+const DataFetch = require('./services/data-fetch');
+
 class App {
   constructor () {
     this.init();
@@ -14,6 +16,7 @@ class App {
   init() {
     new Hover();
     new TabSwitch();
+    new DataFetch();
   }
 }
 
