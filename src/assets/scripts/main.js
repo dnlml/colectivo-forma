@@ -16,7 +16,7 @@ class App {
   init() {
     new Hover();
     new TabSwitch();
-    new DataFetch();
+    new DataFetch('GET', 'http://www.mocky.io/v2/5ab96fa72c0000810f1864d2');
   }
 }
 
