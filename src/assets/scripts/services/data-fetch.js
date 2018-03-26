@@ -2,7 +2,7 @@ const Rx = require('rxjs');
 const axios = require('axios');
 
 class DataFetch {
-    constructor(actionType, url) {
+    constructor(actionType, url, params = {}) {
         this.url = url;
         this.actionType = actionType;
         this.init();
