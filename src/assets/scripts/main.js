@@ -2,18 +2,15 @@ const css = require('../styles/main.scss');
 const sprite = require.context('../svg/sprite', false, /\.svg$/);
 sprite.keys().forEach(sprite);
 
-const WebFont = require('webfontloader');
-const Hover = require('./parts/hover');
-const TabSwitch = require('./parts/tab-switch');
-
+import WebFont from 'webfontloader';
+import Slideshow from './parts/slideshow';
 class App {
   constructor () {
     this.init();
   }
 
   init() {
-    new Hover();
-    new TabSwitch();
+    new Slideshow();
   }
 }
 

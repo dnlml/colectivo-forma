@@ -7,7 +7,7 @@ use npm v8.6.0
 
 `npm i`
 
-`npm run dev`
+`npm start`
 
 or
 
