@@ -2,6 +2,7 @@
   position: relative;
   align-self: flex-end;
   text-align: right;
+  padding: 1.2em 1.8em;
 
   &:after {
     content: '';
@@ -9,6 +10,7 @@
     background: white;
     z-index: 5;
     padding-bottom: .3em;
+    opacity: .96;
   }
 }
 
