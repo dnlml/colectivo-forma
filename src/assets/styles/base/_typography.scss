@@ -33,15 +33,10 @@ body {
 .headline {
   font-weight: 700;
   font-size: 6rem;
-  padding: .4em 0;
 
   @include mq(small) {
     display: flex;
     font-size: 9rem;
-  }
-
-  @include mq(medium-l) {
-    padding: 0 0 .4em 0;
   }
 }
 

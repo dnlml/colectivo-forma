@@ -1,54 +1,16 @@
-@import '../vendors/flickity.scss';
-@import '../vendors/flickity-fullscren.scss';
-
 .slideshow {
-  width: 100%;
-  max-width: 64rem;
-}
-
-.slideshow__list {
-  display: block;
-  width: 100%;
+  @include absolute();
 }
 
 .slideshow__item {
+  @include absolute($bottom: auto, $height: auto);
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 
-.slideshow.is-fullscreen .slideshow__item {
-  height: 100%;
-}
+  transition: opacity 2s ease-in;
 
-// flickity override
-
-.flickity-button,
-.flickity-button:hover {
-  background-color: transparent;
-}
-
-.flickity-fullscreen-button,
-.flickity-fullscreen-button:hover {
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 0;
-    top: 0;
-    right: 0;
-
-    .flickity-button-icon {
-      width: 24px;
-      height: 18px;
-    }
-}
-
-.flickity-prev-next-button {
-  &.next{
-    right: -50px;
-  }
-  &.previous {
-    left: -50px;
+  & + & {
+    opacity: 0;
   }
 }

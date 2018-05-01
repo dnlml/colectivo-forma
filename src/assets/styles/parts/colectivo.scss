@@ -1,13 +1,21 @@
 .colectivo__title {
+  position: relative;
   align-self: flex-end;
   text-align: right;
 
-  position: relative;
-  z-index: 10;
+  &:after {
+    content: '';
+    @include absolute();
+    background: white;
+    z-index: 5;
+    padding-bottom: .3em;
+  }
 }
 
 .colectivo__title__h1 {
-  @include mq(medium-l) {
+  position: relative;
+  z-index: 10;
+  @include mq(xlarge-s) {
     margin-right: -10rem;
   }
 }

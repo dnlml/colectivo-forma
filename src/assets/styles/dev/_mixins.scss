@@ -13,6 +13,7 @@
   small: 640px;
   medium: 768px;
   large: 1024px;
+  xlarge-s: 1200px;
   xlarge: 1280px;
   xxlarge: 1440px;
 
@@ -35,6 +36,9 @@
   }
   @else if $size == large {
     @media (min-width: 1024px)  { @content; }
+  }
+  @else if $size == xlarge-s {
+    @media (min-width: 1200px) { @content; }
   }
   @else if $size == xlarge {
     @media (min-width: 1280px) { @content; }

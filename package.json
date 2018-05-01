@@ -1,6 +1,6 @@
 {
   "name": "colectivo-forma",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The website of the colectivo-forma",
   "main": "index.js",
   "scripts": {
@@ -41,8 +41,5 @@
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.4.1",
     "write-file-webpack-plugin": "^4.2.0"
-  },
-  "dependencies": {
-    "flickity": "^2.1.1"
   }
 }
