@@ -4,11 +4,13 @@
   margin: 0 auto;
   min-height: 100vh;
 
-  display: flex;
-  align-items: center;
-
   * {
     transition: color .33s ease-in-out;
+  }
+
+  @include mq(medium) {
+    display: flex;
+    align-items: center;
   }
 
   @include mq(large) {

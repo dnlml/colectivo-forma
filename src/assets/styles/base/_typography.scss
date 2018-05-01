@@ -34,7 +34,7 @@ body {
   font-weight: 700;
   font-size: 6rem;
 
-  @include mq(small) {
+  @include mq(medium) {
     display: flex;
     font-size: 9rem;
   }
